@@ -9,6 +9,12 @@ import './App.css'
 export const App = () => {
   const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/spitz-indian/Indian_Spitz.jpg');
 
+  async function handleFetchDogImage () {
+    const response = await fetch('https://dog.ceo/api/breeds/image/random');
+    const json = await response.json();
+    setDogUrl(json.message);
+  }
+
   return (
     <>
       <header>
@@ -17,9 +23,11 @@ export const App = () => {
 
       <h2>犬の画像を表示するサイトです。</h2>
 
-      <img src={dogUrl} alt='dog image' />
+      <div>
+        <img src={dogUrl} alt='dog image' />
+      </div>
 
-      <button onClick={() => setDogUrl('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg')}>
+      <button onClick={handleFetchDogImage}>
         更新
       </button>
     </>
