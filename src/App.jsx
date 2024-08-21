@@ -17,7 +17,7 @@ export const App = () => {
 
   return (
     <>
-      <header>
+      <header className='header'>
         TechTrain App
       </header>
 
@@ -27,7 +27,7 @@ export const App = () => {
         <img src={dogUrl} alt='dog image' />
       </div>
 
-      <button onClick={handleFetchDogImage}>
+      <button onClick={handleFetchDogImage} className='button'>
         更新
       </button>
     </>
