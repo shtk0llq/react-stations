@@ -1,5 +1,8 @@
 .header {
+    font-size: 2rem;
+    font-weight: bold;
     background-color: #f5f5f5;
+    text-align: center;
 }
 
 .button {
@@ -14,4 +17,47 @@
     opacity: .8;
     margin-top: 1px;
     cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0 1rem;
+    border-bottom: 1px solid #7a7a7a;
+}
+
+.parent {
+    text-align: center;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.select {
+    width: 320px;
+    padding: .5rem 1rem;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem 0 1rem;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image {
+    width: 400px;
+    height: 320px;
 }
